@@ -206,7 +206,7 @@ final class RecordActions : UITableViewController, ChangeSignificantDateDelegate
                     guard let rootController = ((UIApplication.shared.delegate as? TimesheetsAppDelegate)!.window?.rootViewController) as? UITabBarController else {break}
                     let currentViewControllers =  rootController.viewControllers!
                     var viewControllers = Array(currentViewControllers[0...2])
-                    viewControllers.append(storyboard!.instantiateViewController(withIdentifier: "AircraftTab"))
+                    viewControllers.append(getViewController(from: "Aircraft", withIdentifier: "AircraftTab"))
                     rootController.setViewControllers(viewControllers, animated:true)
                     presentingViewController?.dismiss(animated: true, completion:nil)
                 }

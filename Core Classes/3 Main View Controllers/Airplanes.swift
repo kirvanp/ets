@@ -1165,7 +1165,11 @@ final class Airplanes : UITableViewController, NSFetchedResultsControllerDelegat
             return true
         }
     }
-    
+
+    private func iPadStoryboardNavigationController(for identifier: String) -> UINavigationController? {
+        return getViewController(from: "iPadStoryboard", withIdentifier: identifier) as? UINavigationController
+    }
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         guard observerMode == false else {tableView.deselectRow(at: indexPath, animated: true); return}
@@ -1175,51 +1179,51 @@ final class Airplanes : UITableViewController, NSFetchedResultsControllerDelegat
             dismiss(animated: false, completion:nil)
         }
         
-        var editGliderNavController: UINavigationController
         let aircraftBeingEdited = fetchController.object(at: indexPath)
         let flightStatus = aircraftBeingEdited.status
         let hookedUp = aircraftBeingEdited.hookupStatus
         
+        var editGliderNavController: UINavigationController
         switch (flightStatus, hookedUp, aircraftBeingEdited.type)
         {
         case (.landed, .unhooked, .glider):
-            guard let controller = storyboard?.instantiateViewController(withIdentifier: "GliderOnGroundUnhooked") as? UINavigationController else {return}
+            guard let controller = iPadStoryboardNavigationController(for: "GliderOnGroundUnhooked") else {return}
             editGliderNavController = controller
           
         case (.landed, .hooked, .glider):
-            guard let controller = storyboard?.instantiateViewController(withIdentifier: "GliderOnGroundHooked") as? UINavigationController else {return}
+            guard let controller = iPadStoryboardNavigationController(for: "GliderOnGroundHooked") else {return}
             editGliderNavController = controller
 
         case (.flying, _, .glider):
-            guard let controller = storyboard?.instantiateViewController(withIdentifier: "GliderInAir") as? UINavigationController else {return}
+            guard let controller = iPadStoryboardNavigationController(for: "GliderInAir") else {return}
             editGliderNavController = controller
 
         case (.landed, .unhooked, .towplane):
-            guard let controller = storyboard?.instantiateViewController(withIdentifier: "TowplaneOnGroundUnhooked") as? UINavigationController else {return}
+            guard let controller = iPadStoryboardNavigationController(for: "TowplaneOnGroundUnhooked") else {return}
             editGliderNavController = controller
 
         case (.landed, .hooked, .towplane):
-            guard let controller = storyboard?.instantiateViewController(withIdentifier: "TowplaneOnGroundHooked") as? UINavigationController else {return}
+            guard let controller = iPadStoryboardNavigationController(for: "TowplaneOnGroundHooked") else {return}
             editGliderNavController = controller
 
         case (.flying, _, .towplane):
-            guard let controller = storyboard?.instantiateViewController(withIdentifier: "TowplaneInAir") as? UINavigationController else {return}
+            guard let controller = iPadStoryboardNavigationController(for: "TowplaneInAir") else {return}
             editGliderNavController = controller
 
         case (_, .unhooked, .winch):
-            guard let controller = storyboard?.instantiateViewController(withIdentifier: "WinchOnGroundUnhooked") as? UINavigationController else {return}
+            guard let controller = iPadStoryboardNavigationController(for: "WinchOnGroundUnhooked") else {return}
             editGliderNavController = controller
 
         case (_, .hooked, .winch):
-            guard let controller = storyboard?.instantiateViewController(withIdentifier: "WinchOnGroundHooked") as? UINavigationController else {return}
+            guard let controller = iPadStoryboardNavigationController(for: "WinchOnGroundHooked") else {return}
             editGliderNavController = controller
 
         case (_, .unhooked, .auto):
-            guard let controller = storyboard?.instantiateViewController(withIdentifier: "AutoOnGroundUnhooked") as? UINavigationController else {return}
+            guard let controller = iPadStoryboardNavigationController(for: "AutoOnGroundUnhooked") else {return}
             editGliderNavController = controller
 
         case (_, .hooked, .auto):
-            guard let controller = storyboard?.instantiateViewController(withIdentifier: "AutoOnGroundHooked") as? UINavigationController else {return}
+            guard let controller = iPadStoryboardNavigationController(for: "AutoOnGroundHooked") else {return}
             editGliderNavController = controller
         }
         

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zX5-5a-ldN">
+    <device id="ipad10_2" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TNI-->
+        <scene sceneID="rFR-qO-NT9">
+            <objects>
+                <viewController id="zX5-5a-ldN" customClass="TNIPickerView" customModule="Timesheets" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CnS-XF-5J2"/>
+                        <viewControllerLayoutGuide type="bottom" id="Iu9-ei-QDm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OTY-oM-TaO">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DlO-EN-sAC">
+                                <rect key="frame" x="20" y="0.0" width="770" height="287"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ed4-2K-Hlx">
+                                        <rect key="frame" x="0.0" y="0.0" width="770" height="216"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="500" constant="216" id="4ov-V3-WbN"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dataSource" destination="zX5-5a-ldN" id="jfj-aA-DcF"/>
+                                            <outlet property="delegate" destination="zX5-5a-ldN" id="UH4-KX-rgA"/>
+                                        </connections>
+                                    </pickerView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1wy-Mh-Ril">
+                                        <rect key="frame" x="0.0" y="215" width="770" height="29"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Adjust by 1000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RmJ-b0-1NT">
+                                                <rect key="frame" x="0.0" y="0.0" width="676" height="29"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="4Pj-5P-ZcC"/>
+                                                    <constraint firstAttribute="width" constant="137" id="AzC-Ot-EhX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="4Pj-5P-ZcC"/>
+                                                        <exclude reference="AzC-Ot-EhX"/>
+                                                    </mask>
+                                                </variation>
+                                            </label>
+                                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" maximumValue="50000" stepValue="1000" translatesAutoresizingMaskIntoConstraints="NO" id="QUT-5B-VnY">
+                                                <rect key="frame" x="676" y="0.0" width="94" height="29"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="29" id="IBv-cq-i6c"/>
+                                                    <constraint firstAttribute="width" constant="94" id="YRT-iL-LvM"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="stepperValueChanged" destination="zX5-5a-ldN" eventType="valueChanged" id="n1c-Vs-iEU"/>
+                                                </connections>
+                                            </stepper>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lId-te-Nqw">
+                                        <rect key="frame" x="0.0" y="243" width="770" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="7e7-o8-Wcc"/>
+                                        </constraints>
+                                        <state key="normal" title="Set to Final TTSN of Prior Entry"/>
+                                        <connections>
+                                            <action selector="setToPriorButtonPushed" destination="zX5-5a-ldN" eventType="touchUpInside" id="J5w-Zd-NK6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Iu9-ei-QDm" firstAttribute="top" secondItem="DlO-EN-sAC" secondAttribute="bottom" id="5du-XK-loB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DlO-EN-sAC" secondAttribute="trailing" id="8pO-7k-qeb"/>
+                            <constraint firstItem="DlO-EN-sAC" firstAttribute="leading" secondItem="OTY-oM-TaO" secondAttribute="leadingMargin" id="ACM-zd-UdU"/>
+                            <constraint firstItem="DlO-EN-sAC" firstAttribute="top" secondItem="CnS-XF-5J2" secondAttribute="bottom" id="Ckc-Ho-FHm"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5du-XK-loB"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="TNI" id="1gv-uU-Dno">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="T1T-j0-zeU">
+                            <connections>
+                                <action selector="cancel" destination="zX5-5a-ldN" id="blt-GH-SPq"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="eeU-Ut-4CN">
+                            <connections>
+                                <action selector="saveButtonPushed" destination="zX5-5a-ldN" id="IKU-FO-Reo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="picker" destination="Ed4-2K-Hlx" id="JiL-sQ-ZPo"/>
+                        <outlet property="stackView" destination="DlO-EN-sAC" id="3hZ-QK-fPM"/>
+                        <outlet property="stepper" destination="QUT-5B-VnY" id="ckQ-Fg-CAB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wRW-sz-2gR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9364" y="5116"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.062745098039215685" green="0.29411764705882354" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+</document>

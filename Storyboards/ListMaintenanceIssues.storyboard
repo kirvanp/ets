@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="C52-fy-uP8">
+    <device id="ipad10_2" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Issues-->
+        <scene sceneID="j1O-tN-EKf">
+            <objects>
+                <tableViewController id="C52-fy-uP8" customClass="ListMaintenanceIssues" customModule="Timesheets" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4gr-d4-3gD">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Issue Cell" textLabel="gQm-6v-3Dz" detailTextLabel="6qE-Xo-RiU" style="IBUITableViewCellStyleValue2" id="5BP-0y-3na">
+                                <rect key="frame" x="0.0" y="28" width="810" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5BP-0y-3na" id="Vh4-Wv-ddk">
+                                    <rect key="frame" x="0.0" y="0.0" width="779" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gQm-6v-3Dz">
+                                            <rect key="frame" x="20" y="14" width="91" height="17"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6qE-Xo-RiU">
+                                            <rect key="frame" x="117" y="14" width="37.5" height="17"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="OiT-Ae-dwp" kind="show" identifier="EditIssueSegue" id="HOW-LT-MEh"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="C52-fy-uP8" id="XQN-mD-D1k"/>
+                            <outlet property="delegate" destination="C52-fy-uP8" id="IFk-Yb-Gfg"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Issues" id="MoQ-JW-ey1">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="kBn-4d-g7x">
+                            <connections>
+                                <segue destination="OiT-Ae-dwp" kind="show" identifier="NewIssueSegue" id="vk2-T1-JaZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p6r-qo-pNy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7836" y="5863"/>
+        </scene>
+        <!--Description-->
+        <scene sceneID="YVd-pW-6Qt">
+            <objects>
+                <viewController id="OiT-Ae-dwp" customClass="EditMaintenanceIssue" customModule="Timesheets" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="idl-zV-iBT"/>
+                        <viewControllerLayoutGuide type="bottom" id="DbB-0n-oxM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GF4-mD-c78">
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="1006.9200564096436"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PPf-ii-tYo">
+                                <rect key="frame" x="0.0" y="0.0" width="712" height="1007"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="600" text="Describe the issue in the box below" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="c1J-Rw-sNO">
+                                        <rect key="frame" x="0.0" y="0.0" width="712" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="44" id="eed-4c-9bZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="699" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaz-xB-AfF">
+                                        <rect key="frame" x="0.0" y="44" width="712" height="659"/>
+                                        <color key="backgroundColor" red="0.85837850765306123" green="0.85837850765306123" blue="0.85837850765306123" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="53V-fB-9Ux"/>
+                                            <constraint firstAttribute="height" constant="105" id="jYB-gG-VZP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="jYB-gG-VZP"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="delegate" destination="OiT-Ae-dwp" id="Sv4-Q9-p01"/>
+                                        </connections>
+                                    </textView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="600" text="Date issue first noted" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="p0c-aR-B3E">
+                                        <rect key="frame" x="0.0" y="703" width="712" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="44" id="JHO-ZM-svK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Dh8-He-CJX">
+                                        <rect key="frame" x="0.0" y="747" width="712" height="216"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="700" constant="216" id="R2c-Un-IiQ"/>
+                                        </constraints>
+                                        <date key="minimumDate" timeIntervalSinceReferenceDate="378730800">
+                                            <!--2013-01-01 11:00:00 +0000-->
+                                        </date>
+                                        <locale key="locale" localeIdentifier="en_US"/>
+                                    </datePicker>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fnB-Bs-9ay">
+                                        <rect key="frame" x="0.0" y="963" width="712" height="44"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="VKY-88-jgA"/>
+                                        </constraints>
+                                        <items>
+                                            <barButtonItem systemItem="trash" id="kjo-lD-Crc">
+                                                <connections>
+                                                    <action selector="cancel" destination="OiT-Ae-dwp" id="0eH-sE-5gy"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                    </toolbar>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="c1J-Rw-sNO" firstAttribute="top" secondItem="PPf-ii-tYo" secondAttribute="top" id="kwH-4H-po0"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="kwH-4H-po0"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="PPf-ii-tYo" secondAttribute="bottom" id="BUs-22-Acl"/>
+                            <constraint firstItem="PPf-ii-tYo" firstAttribute="top" secondItem="GF4-mD-c78" secondAttribute="topMargin" id="NAJ-lV-FpC"/>
+                            <constraint firstItem="DbB-0n-oxM" firstAttribute="top" secondItem="PPf-ii-tYo" secondAttribute="bottom" id="byG-yE-d7c"/>
+                            <constraint firstItem="PPf-ii-tYo" firstAttribute="leading" secondItem="GF4-mD-c78" secondAttribute="leading" id="ekh-1p-arB"/>
+                            <constraint firstItem="PPf-ii-tYo" firstAttribute="top" secondItem="idl-zV-iBT" secondAttribute="bottom" id="hem-hf-SAU"/>
+                            <constraint firstAttribute="trailing" secondItem="PPf-ii-tYo" secondAttribute="trailing" id="lPV-mC-GEL"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="BUs-22-Acl"/>
+                                <exclude reference="NAJ-lV-FpC"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Description" id="Ocn-Jb-ut4">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Sua-Qa-5WS">
+                            <connections>
+                                <action selector="done" destination="OiT-Ae-dwp" id="age-Yp-jmo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="datePicker" destination="Dh8-He-CJX" id="SRd-Lv-8ye"/>
+                        <outlet property="textViewer" destination="xaz-xB-AfF" id="XPp-6m-vgn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hM7-Ud-jcG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8560" y="5863"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="vk2-T1-JaZ"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.062745098039215685" green="0.29411764705882354" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+</document>

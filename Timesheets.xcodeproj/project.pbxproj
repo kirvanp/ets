@@ -216,7 +216,13 @@
 		F33ED8B5237E38DC0020CEBE /* StatsReportFromDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33ED8B4237E38DC0020CEBE /* StatsReportFromDate.swift */; };
 		F33ED8B7237E4EA20020CEBE /* AttendanceRecordForPersonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33ED8B6237E4EA20020CEBE /* AttendanceRecordForPersonTests.swift */; };
 		F33ED8B9237E53890020CEBE /* CoreDataTestSetupHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33ED8B8237E53890020CEBE /* CoreDataTestSetupHelpers.swift */; };
+		F36414CA23C2D688004C43C6 /* ListMaintenanceIssues.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F36414C923C2D688004C43C6 /* ListMaintenanceIssues.storyboard */; };
 		F37978462336F9F1006F69DA /* ExcelExport in Frameworks */ = {isa = PBXBuildFile; productRef = F37978452336F9F1006F69DA /* ExcelExport */; };
+		F3DB23FD23C2B5A9002FA22F /* Aircraft.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3DB23FC23C2B5A9002FA22F /* Aircraft.storyboard */; };
+		F3DB23FF23C2D3CB002FA22F /* TNIPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3DB23FE23C2D3CB002FA22F /* TNIPicker.storyboard */; };
+		F3DB240123C2D493002FA22F /* ViewJourneyLogEntries.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3DB240023C2D493002FA22F /* ViewJourneyLogEntries.storyboard */; };
+		F3FB666423BE58F7008A2C79 /* AddAircraft.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3FB666323BE58F7008A2C79 /* AddAircraft.storyboard */; };
+		F3FB666623BFE0BD008A2C79 /* ChangeUnit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3FB666523BFE0BD008A2C79 /* ChangeUnit.storyboard */; };
 		F3FDAF852339ACFC002E11EE /* ReportGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FDAF842339ACFC002E11EE /* ReportGeneratorTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -522,6 +528,12 @@
 		F33ED8B4237E38DC0020CEBE /* StatsReportFromDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsReportFromDate.swift; sourceTree = "<group>"; };
 		F33ED8B6237E4EA20020CEBE /* AttendanceRecordForPersonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceRecordForPersonTests.swift; sourceTree = "<group>"; };
 		F33ED8B8237E53890020CEBE /* CoreDataTestSetupHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTestSetupHelpers.swift; sourceTree = "<group>"; };
+		F36414C923C2D688004C43C6 /* ListMaintenanceIssues.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ListMaintenanceIssues.storyboard; path = Storyboards/ListMaintenanceIssues.storyboard; sourceTree = SOURCE_ROOT; };
+		F3DB23FC23C2B5A9002FA22F /* Aircraft.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Aircraft.storyboard; path = Storyboards/Aircraft.storyboard; sourceTree = SOURCE_ROOT; };
+		F3DB23FE23C2D3CB002FA22F /* TNIPicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TNIPicker.storyboard; path = Storyboards/TNIPicker.storyboard; sourceTree = SOURCE_ROOT; };
+		F3DB240023C2D493002FA22F /* ViewJourneyLogEntries.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ViewJourneyLogEntries.storyboard; path = Storyboards/ViewJourneyLogEntries.storyboard; sourceTree = SOURCE_ROOT; };
+		F3FB666323BE58F7008A2C79 /* AddAircraft.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AddAircraft.storyboard; path = Storyboards/AddAircraft.storyboard; sourceTree = SOURCE_ROOT; };
+		F3FB666523BFE0BD008A2C79 /* ChangeUnit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ChangeUnit.storyboard; path = Storyboards/ChangeUnit.storyboard; sourceTree = SOURCE_ROOT; };
 		F3FDAF822339ACFC002E11EE /* TimesheetsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimesheetsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3FDAF842339ACFC002E11EE /* ReportGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportGeneratorTests.swift; sourceTree = "<group>"; };
 		F3FDAF862339ACFC002E11EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -669,6 +681,12 @@
 			isa = PBXGroup;
 			children = (
 				DA059F081438C6C2000FEB4C /* iPadStoryboard.storyboard */,
+				F36414C923C2D688004C43C6 /* ListMaintenanceIssues.storyboard */,
+				F3DB240023C2D493002FA22F /* ViewJourneyLogEntries.storyboard */,
+				F3DB23FE23C2D3CB002FA22F /* TNIPicker.storyboard */,
+				F3DB23FC23C2B5A9002FA22F /* Aircraft.storyboard */,
+				F3FB666523BFE0BD008A2C79 /* ChangeUnit.storyboard */,
+				F3FB666323BE58F7008A2C79 /* AddAircraft.storyboard */,
 			);
 			name = Storyboards;
 			path = iPhone;
@@ -1375,22 +1393,28 @@
 				DA0DCD781BE1C8E9001DA3F9 /* Glider 13.aiff in Resources */,
 				DA0DCD6C1BE1C8E9001DA3F9 /* Glider 1.aiff in Resources */,
 				DA0DCD561BE1C794001DA3F9 /* Scout 5.aiff in Resources */,
+				F3DB23FD23C2B5A9002FA22F /* Aircraft.storyboard in Resources */,
 				DA0DCD6F1BE1C8E9001DA3F9 /* Glider 4.aiff in Resources */,
+				F3FB666623BFE0BD008A2C79 /* ChangeUnit.storyboard in Resources */,
 				DA579BCB14534B3700B8FB9C /* TowplaneSequenceDirections.plist in Resources */,
 				DAD936511475FCB40096A5CC /* Settings.bundle in Resources */,
 				DA0DCD7B1BE1C8E9001DA3F9 /* Glider 16.aiff in Resources */,
 				DA369A0A149F01C000200175 /* RGSflights.plist in Resources */,
 				DA5BE8C314F9E0C60043E6E0 /* AtlanticAerodromes.csv in Resources */,
+				F3FB666423BE58F7008A2C79 /* AddAircraft.storyboard in Resources */,
 				DA62E5EC1547883E005FA5FA /* PacificAerodromes.csv in Resources */,
 				DAF6189716CF351900543415 /* CentralAerodromes.csv in Resources */,
 				DA0DCD4E1BE1C6D3001DA3F9 /* Scout 2.aiff in Resources */,
 				DA9898D21ADF4B3E0058F8DE /* Sample.sqlite in Resources */,
 				DA0DCD7D1BE1C8E9001DA3F9 /* Glider 18.aiff in Resources */,
 				DA0DCD541BE1C794001DA3F9 /* Scout 4.aiff in Resources */,
+				F3DB23FF23C2D3CB002FA22F /* TNIPicker.storyboard in Resources */,
 				DA0DCD791BE1C8E9001DA3F9 /* Glider 14.aiff in Resources */,
+				F36414CA23C2D688004C43C6 /* ListMaintenanceIssues.storyboard in Resources */,
 				DAD5EF3E16E056780096E6C5 /* EasternAerodromes.csv in Resources */,
 				DAE401231B688E0A00F6D1B1 /* LaunchScreen.storyboard in Resources */,
 				DA0DCD701BE1C8E9001DA3F9 /* Glider 5.aiff in Resources */,
+				F3DB240123C2D493002FA22F /* ViewJourneyLogEntries.storyboard in Resources */,
 				DA3AA5FA1795A2F200562CC3 /* RandomNames.csv in Resources */,
 				DA3AA5FB1795A2F200562CC3 /* RandomSurnames.csv in Resources */,
 				DA0DCD751BE1C8E9001DA3F9 /* Glider 10.aiff in Resources */,

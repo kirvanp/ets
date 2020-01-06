@@ -314,6 +314,12 @@ let logDateFormatter : DateFormatter =
     return formatter
 }()
 
+func getViewController(from storyboardName: String, withIdentifier identifier: String) -> UIViewController
+{
+    let storyboard = UIStoryboard(name: storyboardName, bundle: Bundle.main)
+    return storyboard.instantiateViewController(withIdentifier: identifier)
+}
+
 func printLog(_ message : String, _ file : String = #file, _ function : String = #function, _ line : Int = #line)
 {
     var startIndex = file.startIndex

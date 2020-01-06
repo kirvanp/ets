@@ -63,7 +63,7 @@ final class OrientationViewController: UITabBarController, UITabBarControllerDel
         
         viewControllers = newControllers
     }
-    
+
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator)
     {
         regularFormat = (size.width * size.height) >= 500000 ? true : false
@@ -85,10 +85,10 @@ final class OrientationViewController: UITabBarController, UITabBarControllerDel
             {
                 tabBar.isHidden = false
                 var newControllers = [UIViewController]()
-                newControllers.append(storyboard!.instantiateViewController(withIdentifier: "Change Unit"))
+                newControllers.append(getViewController(from: "ChangeUnit", withIdentifier: "Change Unit"))
                 newControllers.append(storyboard!.instantiateViewController(withIdentifier: "PilotsTab"))
                 newControllers.append(storyboard!.instantiateViewController(withIdentifier: "RecordsTab"))
-                newControllers.append(storyboard!.instantiateViewController(withIdentifier: "AircraftTab"))
+                newControllers.append(getViewController(from: "Aircraft", withIdentifier: "AircraftTab"))
                 setViewControllers(newControllers, animated: true)
             }
         }
