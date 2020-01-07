@@ -216,6 +216,7 @@
 		F33ED8B5237E38DC0020CEBE /* StatsReportFromDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33ED8B4237E38DC0020CEBE /* StatsReportFromDate.swift */; };
 		F33ED8B7237E4EA20020CEBE /* AttendanceRecordForPersonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33ED8B6237E4EA20020CEBE /* AttendanceRecordForPersonTests.swift */; };
 		F33ED8B9237E53890020CEBE /* CoreDataTestSetupHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33ED8B8237E53890020CEBE /* CoreDataTestSetupHelpers.swift */; };
+		F349E7C023C4044A001970B0 /* EditCadet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F349E7BF23C4044A001970B0 /* EditCadet.storyboard */; };
 		F36414CA23C2D688004C43C6 /* ListMaintenanceIssues.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F36414C923C2D688004C43C6 /* ListMaintenanceIssues.storyboard */; };
 		F37978462336F9F1006F69DA /* ExcelExport in Frameworks */ = {isa = PBXBuildFile; productRef = F37978452336F9F1006F69DA /* ExcelExport */; };
 		F3DB23FD23C2B5A9002FA22F /* Aircraft.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3DB23FC23C2B5A9002FA22F /* Aircraft.storyboard */; };
@@ -528,6 +529,7 @@
 		F33ED8B4237E38DC0020CEBE /* StatsReportFromDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsReportFromDate.swift; sourceTree = "<group>"; };
 		F33ED8B6237E4EA20020CEBE /* AttendanceRecordForPersonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceRecordForPersonTests.swift; sourceTree = "<group>"; };
 		F33ED8B8237E53890020CEBE /* CoreDataTestSetupHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTestSetupHelpers.swift; sourceTree = "<group>"; };
+		F349E7BF23C4044A001970B0 /* EditCadet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = EditCadet.storyboard; path = Storyboards/EditCadet.storyboard; sourceTree = SOURCE_ROOT; };
 		F36414C923C2D688004C43C6 /* ListMaintenanceIssues.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ListMaintenanceIssues.storyboard; path = Storyboards/ListMaintenanceIssues.storyboard; sourceTree = SOURCE_ROOT; };
 		F3DB23FC23C2B5A9002FA22F /* Aircraft.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Aircraft.storyboard; path = Storyboards/Aircraft.storyboard; sourceTree = SOURCE_ROOT; };
 		F3DB23FE23C2D3CB002FA22F /* TNIPicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TNIPicker.storyboard; path = Storyboards/TNIPicker.storyboard; sourceTree = SOURCE_ROOT; };
@@ -681,6 +683,7 @@
 			isa = PBXGroup;
 			children = (
 				DA059F081438C6C2000FEB4C /* iPadStoryboard.storyboard */,
+				F349E7BF23C4044A001970B0 /* EditCadet.storyboard */,
 				F36414C923C2D688004C43C6 /* ListMaintenanceIssues.storyboard */,
 				F3DB240023C2D493002FA22F /* ViewJourneyLogEntries.storyboard */,
 				F3DB23FE23C2D3CB002FA22F /* TNIPicker.storyboard */,
@@ -1409,6 +1412,7 @@
 				DA0DCD7D1BE1C8E9001DA3F9 /* Glider 18.aiff in Resources */,
 				DA0DCD541BE1C794001DA3F9 /* Scout 4.aiff in Resources */,
 				F3DB23FF23C2D3CB002FA22F /* TNIPicker.storyboard in Resources */,
+				F349E7C023C4044A001970B0 /* EditCadet.storyboard in Resources */,
 				DA0DCD791BE1C8E9001DA3F9 /* Glider 14.aiff in Resources */,
 				F36414CA23C2D688004C43C6 /* ListMaintenanceIssues.storyboard in Resources */,
 				DAD5EF3E16E056780096E6C5 /* EasternAerodromes.csv in Resources */,

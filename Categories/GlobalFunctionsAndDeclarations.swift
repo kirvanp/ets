@@ -320,6 +320,12 @@ func getViewController(from storyboardName: String, withIdentifier identifier: S
     return storyboard.instantiateViewController(withIdentifier: identifier)
 }
 
+func getNavigationController(from storyboardName: String, withIdentifier identifier: String) -> UINavigationController?
+{
+    let storyboard = UIStoryboard(name: storyboardName, bundle: Bundle.main)
+    return storyboard.instantiateViewController(withIdentifier: identifier) as? UINavigationController
+}
+
 func printLog(_ message : String, _ file : String = #file, _ function : String = #function, _ line : Int = #line)
 {
     var startIndex = file.startIndex

@@ -443,7 +443,9 @@ final class PilotsController : UITableViewController, NSFetchedResultsController
         switch pilot.typeOfParticipant
         {
         case "cadet":
-            guard let controller = storyboard?.instantiateViewController(withIdentifier: "EditCadetNavigationController") as? UINavigationController else {return}
+            guard let controller = getNavigationController(from: "EditCadet",
+                                                           withIdentifier: "EditCadetNavigationController")
+                else {return}
             editPersonNavController = controller
         
         case "guest":
